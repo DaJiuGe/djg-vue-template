@@ -1,17 +1,29 @@
-import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path'
-import AutoImport from 'unplugin-auto-import/vite'
-import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
-import Components from 'unplugin-vue-components/vite'
-import { defineConfig } from 'vite'
-import viteCompression from 'vite-plugin-compression'
-import { viteMockServe } from 'vite-plugin-mock'
+/// <reference types="vitest" />
 
-// https://vitejs.dev/config/
+import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite'
+import { resolve } from 'path'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { viteMockServe } from 'vite-plugin-mock'
+import viteCompression from 'vite-plugin-compression'
+import WindiCSS from 'vite-plugin-windicss'
+
 export default defineConfig({
   // build: {
   //   sourcemap: true
   // },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+      '@assets': resolve(__dirname, 'src/assets'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@views': resolve(__dirname, 'src/views'),
+      '@store': resolve(__dirname, 'src/store'),
+      '@router': resolve(__dirname, 'src/router')
+    }
+  },
   base: './',
   server: {
     proxy: {
@@ -24,6 +36,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    WindiCSS(),
     Components({
       resolvers: [AntDesignVueResolver()],
       dts: 'src/components.d.ts'
@@ -48,11 +61,6 @@ export default defineConfig({
     }),
     viteCompression()
   ],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src')
-    }
-  },
   build: {
     minify: 'terser',
     terserOptions: {
@@ -68,6 +76,13 @@ export default defineConfig({
         entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: '[ext]/[name]-[hash].[ext]'
       }
+    }
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    deps: {
+      inline: ['@vue']
     }
   }
 })

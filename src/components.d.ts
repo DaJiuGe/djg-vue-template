@@ -4,7 +4,12 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AButton: typeof import('ant-design-vue/es')['Button']
+    AForm: typeof import('ant-design-vue/es')['Form']
+    AFormItem: typeof import('ant-design-vue/es')['FormItem']
+    AInput: typeof import('ant-design-vue/es')['Input']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    SystemLogo: typeof import('./components/SystemLogo.vue')['default']
   }
 }
 

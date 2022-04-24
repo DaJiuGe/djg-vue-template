@@ -1,12 +1,18 @@
 {
   "cSpell.words": [
-    "Vite",
-    "vitest",
-    "pinia",
+    "attributify",
+    "axios",
     "iconify",
-    "vitejs",
+    "mockjs",
+    "pinia",
+    "pnpm",
+    "typecheck",
     "unplugin",
-    "pnpm"
+    "Vite",
+    "vitejs",
+    "vitest",
+    "windi",
+    "windicss"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
@@ -14,5 +20,5 @@
   "files.associations": {
     "*.css": "postcss",
   },
-  "editor.formatOnSave": false
+  "editor.formatOnSave": true
 }
