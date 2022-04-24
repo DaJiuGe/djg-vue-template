@@ -8,6 +8,7 @@ declare module 'vue' {
     AForm: typeof import('ant-design-vue/es')['Form']
     AFormItem: typeof import('ant-design-vue/es')['FormItem']
     AInput: typeof import('ant-design-vue/es')['Input']
+    AInputPassword: typeof import('ant-design-vue/es')['InputPassword']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     SystemLogo: typeof import('./components/SystemLogo.vue')['default']
   }
