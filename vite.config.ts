@@ -8,9 +8,9 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { viteMockServe } from 'vite-plugin-mock'
 import viteCompression from 'vite-plugin-compression'
-import WindiCSS from 'vite-plugin-windicss'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
+import Unocss from 'unocss/vite'
 
 export default defineConfig({
   // build: {
@@ -38,7 +38,13 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    WindiCSS(),
+    Pages(),
+    Layouts(),
+    Unocss(),
+    viteMockServe({
+      mockPath: 'mock'
+    }),
+    viteCompression(),
     Components({
       resolvers: [AntDesignVueResolver()],
       dts: 'src/components.d.ts'
@@ -62,13 +68,7 @@ export default defineConfig({
         globalsPropValue: true
       },
       dts: 'src/auto-import.d.ts'
-    }),
-    Pages(),
-    Layouts(),
-    viteMockServe({
-      mockPath: 'mock'
-    }),
-    viteCompression()
+    })
   ],
   build: {
     minify: 'terser',

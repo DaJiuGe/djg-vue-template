@@ -1,11 +1,11 @@
 <template>
   <div class="grid place-content-center w-full h-full bg-gray-200">
-    <div class="w-120 py-8 -mt-24 bg-white border rounded-md shadow">
+    <div class="w-120 py-8 -mt-24 bg-white rounded-md shadow">
       <SystemLogo />
       <a-form
-        v-bind="formLayout"
         :model="formState"
         :rules="formRules"
+        v-bind="formLayout"
         autocomplete="off"
         @finish="handleLogin"
       >
