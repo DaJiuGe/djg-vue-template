@@ -10,6 +10,7 @@ import { viteMockServe } from 'vite-plugin-mock'
 import viteCompression from 'vite-plugin-compression'
 import WindiCSS from 'vite-plugin-windicss'
 import Pages from 'vite-plugin-pages'
+import Layouts from 'vite-plugin-vue-layouts'
 
 export default defineConfig({
   // build: {
@@ -62,9 +63,8 @@ export default defineConfig({
       },
       dts: 'src/auto-import.d.ts'
     }),
-    Pages({
-      extensions: ['vue', 'md']
-    }),
+    Pages(),
+    Layouts(),
     viteMockServe({
       mockPath: 'mock'
     }),

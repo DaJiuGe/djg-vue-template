@@ -14,10 +14,15 @@
     "lib": [
       "esnext",
       "dom"
+    ],
+    "types": [
+      "vite-plugin-vue-layouts/client"
     ]
   },
   "paths": {
-    "~/*": ["src/*"]
+    "~/*": [
+      "src/*"
+    ]
   },
   "include": [
     "src/**/*.ts",
@@ -26,7 +31,10 @@
     "src/**/*.vue",
     "env.d.ts"
   ],
-  "exclude": ["dist", "node_modules"],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"
