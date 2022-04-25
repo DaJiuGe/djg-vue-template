@@ -45,6 +45,11 @@ export default defineConfig({
       imports: [
         'vue',
         'vue-router',
+        'vitest',
+        'pinia',
+        {
+          'vue-types': [['default', 'VueTypes']]
+        },
         {
           axios: [['default', 'axios']]
         }

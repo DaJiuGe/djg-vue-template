@@ -18,7 +18,6 @@
 
 <script lang="ts" setup>
 import Logo from '@assets/logo.png'
-import VueTypes from 'vue-types'
 
 defineProps({
   size: VueTypes.number.def(36),
