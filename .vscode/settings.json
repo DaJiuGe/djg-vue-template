@@ -6,6 +6,7 @@
     "mockjs",
     "pinia",
     "pnpm",
+    "stylelint",
     "typecheck",
     "Unocss",
     "unplugin",
@@ -17,9 +18,18 @@
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
   },
   "files.associations": {
     "*.css": "postcss",
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "stylelint.enable": true,
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "scss",
+    "sass"
+  ]
 }
