@@ -7,6 +7,7 @@
         :rules="formRules"
         v-bind="formLayout"
         autocomplete="off"
+        hideRequiredMark
         @finish="handleLogin"
       >
         <a-form-item label="Username" name="username">
