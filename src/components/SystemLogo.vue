@@ -11,12 +11,13 @@
       class="text-lg font-bold text-gray-600"
       :style="{ marginLeft: gap + 'px' }"
     >
-      XX系统
+      {{ config.name }}
     </span>
   </div>
 </template>
 
 <script lang="ts" setup>
+import config from '../../package.json'
 import Logo from '@assets/logo.png'
 
 defineProps({

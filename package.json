@@ -1,5 +1,5 @@
 {
-  "name": "antdv3",
+  "name": "djg-vue-template",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -37,6 +37,7 @@
     "vite": "^2.9.5",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-mock": "^2.9.6",
+    "vite-plugin-pages": "^0.23.0",
     "vite-plugin-windicss": "^1.8.4",
     "vitest": "^0.9.4",
     "vue-tsc": "^0.29.8",
