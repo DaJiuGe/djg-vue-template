@@ -12,6 +12,7 @@
     "lint-fix": "eslint ."
   },
   "dependencies": {
+    "@ant-design/icons-vue": "^6.1.0",
     "@types/node": "^17.0.25",
     "ant-design-vue": "^3.2.0",
     "axios": "^0.26.1",
