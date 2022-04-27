@@ -17,8 +17,10 @@
 </template>
 
 <script lang="ts" setup>
-import config from '../../package.json'
 import Logo from '@assets/logo.png'
+import VueTypes from 'vue-types'
+
+import config from '../../package.json'
 
 defineProps({
   size: VueTypes.number.def(36),
