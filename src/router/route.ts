@@ -19,6 +19,6 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'home',
-    component: () => import('@/components/HelloWorld.vue')
+    component: () => import('@/pages/home/Home.vue')
   }
 ]
